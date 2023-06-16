@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.box {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+
+.box-container {
+  column-count: 3;
+}
