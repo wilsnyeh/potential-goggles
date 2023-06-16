@@ -1,19 +1,21 @@
 import React, { useState, useContext } from "react";
 import "./App.css";
-import { BoxComponent } from "./BoxComponent";
+import { BoxCounter } from "./BoxCounter";
 import { ButtonCounter } from "./ButtonCounter";
 import { CounterContext } from "./CounterContext";
 
 
 function App() {
-const [box, setBox] = useState('')
-const [counter, setCounter] = useState(0)
+  // const [counter, setCounter] = useState(0)
+  const {counter} = useContext(CounterContext)
 
   return (
-      <>
-      <BoxComponent counter={counter} element={<ButtonCounter/>} />
-      <ButtonCounter counter={counter} setCounter={setCounter}/>
-      </>
+    <>
+    <CounterContext.Provider value={counter}>
+    <BoxCounter/>
+    <ButtonCounter/>
+    </CounterContext.Provider>
+    </>
   );
 }
 
