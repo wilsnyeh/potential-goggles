@@ -1,9 +1,9 @@
 import { useContext } from "react"
 import { CounterContext } from "./CounterContext"
 
-export function ButtonCounter({setCounter}) {
+export function ButtonCounter() {
 
-    const counter = useContext(CounterContext)
+    const {counter, setCounter} = useContext(CounterContext)
 
     const handleIncreaseClick = () => {
         setCounter(counter+1)
@@ -13,10 +13,9 @@ export function ButtonCounter({setCounter}) {
     }
     return (
         <>
-        <CounterContext.Provider>
+        <h1>{counter}</h1>
         <button onClick={handleDecreaseClick}>-1</button>
         <button onClick={handleIncreaseClick}>+1</button>
-        </CounterContext.Provider>
         </>
     )
 }
