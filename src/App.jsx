@@ -3,6 +3,7 @@ import "./App.css";
 import { BoxCounter } from "./BoxCounter";
 import { ButtonCounter } from "./ButtonCounter";
 import { CounterContext } from "./CounterContext";
+import { BoxAndCounter } from "./BoxAndCounter";
 
 
 function App() {
